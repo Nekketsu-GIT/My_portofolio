@@ -29,7 +29,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['nekketsu.herokuapp.com']
+ALLOWED_HOSTS = ['nekketsu.herokuapp.com','127.0.0.1']
 
 # Application definition
 

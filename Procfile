@@ -1,1 +1,1 @@
-web: gunicorn personal_portoflio.wsgi
+web: gunicorn personal_portoflio.wsgi --log-file -
