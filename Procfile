@@ -1,1 +1,1 @@
-web: gunicorn nekketsu.wsgi --log-file -
+web: gunicorn personal_portoflio.wsgi
