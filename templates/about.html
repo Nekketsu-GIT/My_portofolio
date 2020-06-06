@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_content %}
+    <div class="masthead">
+        <h1>About me</h1>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box-shadow-full">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-5">
+                                    <div class="about-img">
+                                        <img src="{% static 'img/testimonial.jpg' %}" class="img-fluid rounded b-shadow-a" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-7">
+                                    <div class="about-info">
+                                        <p><span class="title-s">Email: </span> <span>josedacosta339@gmail.com</span></p>
+                                        <p><span class="title-s">Phone: </span> <span>(221) 78-1050802</span></p>
+                                        <p><span class="title-s">Twitter </span> <span><a href="https://twitter.com/josedacosta339" class="fa fa-twitter"></a></span></p>
+                                        <p><span class="title-s">Twitter </span> <span><a href="https://www.linkedin.com/in/jose-dacosta-95b537182/" class="fa fa-linkedin"></a></span></p>
+                                        <p><span class="title-s">Twitter </span> <span><a href="https://github.com/Nekketsu-GIT" class="fa fa-github"></a></span></p>
+                                        <!-- Add font awesome icons -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-mf">
+                                <p class="title-s">Skill</p>
+                                <ul>
+                                    <li> Python </li>
+                                    <li> Java </li>
+                                    <li> C </li>
+                                    <li> HTML</li>
+                                    <li> CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-me pt-4 pt-md-0">
+                                <div class="title-box-2">
+                                    <h5 class="title-left">
+                                        Hello World!!!
+                                    </h5>
+                                </div>
+                                <p class="lead">
+                                    I am José Pascal Francisco Dacosta, I am 23 and I live in Sénégal with my family. My passion is informatics and new technologies.
+                                </p>
+                                <p class="lead">
+                                    I am on master degree's of software engineering and system of information at ESP. So, I am able to design and build system with high performance.
+                                </p>
+                                <p class="lead">
+                                    The goal of this site, is to present myself and my activities, et make my contribution in the sector of TIC, in Sénégal and around the world.
+                                    I am convinced, the youth is full of potential, and can try the technological challenges
+                                </p>
+                            </div>
+                        </div>
+                        <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="{% static 'cv.pdf' %}" role="button">View my cv</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

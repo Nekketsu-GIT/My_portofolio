@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+    <div class="masthead">
+        <h1>Projects</h1>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="row col-md-8">
+                {% for project in projects %}
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="{{ project.image.url }}" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.description }}</p>
+                                <a href="{% url 'project_detail' project.pk %}"
+                                   class="btn btn-primary">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+        </div>
+    </div>
+{% endblock %}

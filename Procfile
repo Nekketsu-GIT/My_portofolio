@@ -1,0 +1,1 @@
+web: gunicorn nekketsu.wsgi --log-file -

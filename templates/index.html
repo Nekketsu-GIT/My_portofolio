@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+    <div id="home" class="intro route bg-image" style="background-image: url({% static 'img/background.jpg' %})">
+        <div class="intro-content display-table">
+            <div class="table-cell">
+                <div class="container">
+                    <p class="display-6 color-d">Hello, world!</p>
+                    <h1 class="intro-title mb-4">I am Jose Dacosta</h1>
+                    <p class="intro-subtitle"><span class="text-slider-items">CEO SmartSolutions,Software Developer,Web Developer</span><strong class="text-slider"></strong></p>
+                    <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="{% url 'about' %}" role="button">Learn More</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="last projects">
+        <h1>Lastest Projects</h1>
+        <a href="{% url 'project_index' %}"><h3 style="color: darkblue">see more</h3></a>
+        <div class="row">
+            {% if latest_projects_list %}
+                {% for project in latest_projects_list %}
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <img class="card-img-top" src="{{ project.image.url }}" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.description }}</p>
+                                <a href="{% url 'project_detail' project.pk %}"
+                                   class="btn btn-primary">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <br>
+    <div class="last posts">
+        <h1>Latest Post</h1>
+        <a href="{% url 'blog' %}"><h3 style="color: darkblue">see more</h3></a>
+        <div class="row">
+            {% if recent_posts %}
+                {% for post in recent_posts %}
+                    <div class="col-md-4">
+                        <div class="card mb-2">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ post.title }}</h5>
+                                <p class="card-text">{{ post.meta_description }}</p>
+                                <a href="{% url 'blog_post' post.slug %}"
+                                   class="btn btn-primary">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block page_content %}
+    <div class="container">
+        <title>{{ post.seo_title }}</title>
+        <meta name="description" content="{{ post.meta_description }}">
+
+        <!-- Post title -->
+        <h2>{{ post.title }}</h2>
+
+        <!-- Post author + Publish date -->
+{#        Posted by <a href="{% url 'blog_author' author.slug %}">{{ post.author.first_name }} {{ post.author.last_name }}</a> on {{ post.published }}#}
+          Posted by <a href="#">{{ post.author.first_name }} {{ post.author.last_name }}</a> on {{ post.published }}
+
+        <!-- Post categories -->
+        {% comment %}{% for category in post.categories %}
+            <a href="{% url 'blog_category' category.slug %}">{{ category.name }}</a>
+        {% endfor %}{% endcomment %}
+        {% for category in post.categories %}
+            <a href="#">{{ category.name }}</a>
+        {% endfor %}
+        <!-- Post body -->
+        {{ post.body|safe }}
+    </div>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ed8e174459e750e"></script>
+
+{% endblock %}
