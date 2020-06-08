@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 import dj_database_url
+import django_heroku
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,7 +31,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['nekketsu.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['nekketsu.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -80,14 +82,14 @@ WSGI_APPLICATION = 'personal_portoflio.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'NAME': 'my_portofolio',
-		'USER': 'postgres',
-		'PASSWORD': 'dacosta97',
-		'HOST': '',
-		'PORT': '',
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'my_portofolio',
+        'USER': 'postgres',
+        'PASSWORD': 'dacosta97',
+        'HOST': '',
+        'PORT': '',
+    }
 }
 
 # Password validation
@@ -142,7 +144,6 @@ EMAIL_HOST_USER = 'josedacosta.pro.dev@gmail.com'
 EMAIL_HOST_PASSWORD = 'Gmail:*1997Gunners05Software31*'
 
 if os.environ.get('ENV') == 'PRODUCTION':
-
     # Static files settings
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -158,3 +159,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
 
     db_from_env = dj_database_url.config(conn_max_age=500)
     DATABASES['default'].update(db_from_env)
+
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
