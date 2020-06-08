@@ -2,8 +2,13 @@
 {% block page_content %}
     <div class="container">
         <h2>Posts</h2>
-
         <!-- List of posts -->
+        <!-- <div class="row">
+            <div class="row col-md-8">
+                
+            </div>
+{#            {% block sidebar %} {% include 'author&category.html' %} {% endblock sidebar %}#}
+        </div> -->
         {% for post in recent_posts %}
             <div class="card mb-4">
                 <div class="card-body">
@@ -23,6 +28,7 @@
             {% if next_page %}
                 <a href="{% url "archive" next_page %}">Next</a>
             {% endif %}
-        </div>
+        </div>                
     </div>
+
 {% endblock %}

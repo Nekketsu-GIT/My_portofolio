@@ -9,7 +9,7 @@
 
         <!-- Post author + Publish date -->
 {#        Posted by <a href="{% url 'blog_author' author.slug %}">{{ post.author.first_name }} {{ post.author.last_name }}</a> on {{ post.published }}#}
-          Posted by <a href="#">{{ post.author.first_name }} {{ post.author.last_name }}</a> on {{ post.published }}
+        Posted by <a href="#">{{ post.author.first_name }} {{ post.author.last_name }}</a> on {{ post.published }}
 
         <!-- Post categories -->
         {% comment %}{% for category in post.categories %}

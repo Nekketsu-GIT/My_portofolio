@@ -6,9 +6,7 @@ client = ButterCMS('3af08233eb3984f6590f8cd06f6eca9b86e95c42')
 
 
 def home(request, page=1):
-    response = client.posts.all({'page_size': 10, 'page': page})
-    categories = client.categories.all()
-    tags = client.tags.all()
+    response = client.posts.all({'page_size': 3, 'page': page})
 
     try:
         recent_posts = response['data']
@@ -38,19 +36,10 @@ def post(request, slug):
     })
 
 
-# def author(request, slug):
-#     response = client.posts.all({'author_slug': slug})
-#     recent_posts = response['data']
-#
-#     return render(request, 'blog/author.html', {
-#         'recent_posts': recent_posts
-#     })
-#
-#
-# def category(request, slug):
-#     response = client.posts.all({'category_slug': slug})
-#     recent_posts = response['data']
-#
-#     return render(request, 'blog/category.html', {
-#         'recent_posts': recent_posts
-#     })
+"""def authors(request):
+    response=client.authors.all({'include': 'recent_posts'})
+    authors=response['data']
+
+    return render(request, 'blog/authors.html', {
+        'authors': authors
+    })"""

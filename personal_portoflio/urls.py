@@ -26,5 +26,5 @@ urlpatterns = [
                   path("", home, name="home"),
                   path("about/", about, name="about"),
                   path("contact_me/", contact_us, name="contact_us"),
-                  url(r'^blog/', include('blog.urls')),
+                  path('blog/', include('blog.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
