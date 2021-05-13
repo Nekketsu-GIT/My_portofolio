@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
-import dj_database_url
-import django_heroku
+
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,10 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(=tyf@8sfown%@xjdq$ax^lk3f(k=1w-edn8t#v7-u!2ozpm94'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.environ.get('ENV') == 'PRODUCTION':
-    DEBUG = False
-else:
-    DEBUG = True
+DEBUG = True
 
 ALLOWED_HOSTS = ['nekketsu.herokuapp.com', '127.0.0.1']
 
@@ -83,12 +79,12 @@ WSGI_APPLICATION = 'personal_portoflio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'my_portofolio',
-        'USER': 'postgres',
-        'PASSWORD': 'dacosta97',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_portofolio',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
@@ -142,24 +138,3 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'josedacosta.pro.dev@gmail.com'
 EMAIL_HOST_PASSWORD = 'Gmail:*1997Gunners05Software31*'
-
-if os.environ.get('ENV') == 'PRODUCTION':
-    # Static files settings
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-
-    # Extra places for collectstatic to find static files.
-    STATICFILES_DIRS = (
-        os.path.join(PROJECT_ROOT, 'static'),
-    )
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
-
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
