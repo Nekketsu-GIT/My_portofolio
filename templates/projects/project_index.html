@@ -7,7 +7,6 @@
     <br>
     <div class="container">
         <div class="row">
-            <div class="row col-md-8">
                 {% for project in projects %}
                     <div class="col-md-4">
                         <div class="card mb-2">
@@ -23,8 +22,6 @@
                         </div>
                     </div>
                 {% endfor %}
-            </div>
-            {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
         </div>
     </div>
 {% endblock %}

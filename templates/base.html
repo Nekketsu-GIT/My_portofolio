@@ -1,78 +1,66 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Jose Dacosta</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <title>CV Jose DACOSTA</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    <script src="{% static 'js/script.js' %}"></script>
 </head>
-<body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+    <a class="navbar-brand" href="#"></a>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'project_index' %}">Projects</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'contact_us' %}">ContactMe</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <i class="fas fa-bars fa-lg"></i>
+    </button>
 
-    </nav>
-
+    <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
+        <ul class="nav nav-pills navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">Moi</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'project_index' %}">Projets</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'blog' %}">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contact_us' %}">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 </header>
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+
 
 <div class="container">
     {% block page_content %}
 
     {% endblock %}
     <br>
-    <footer>
-        <p class="m-0 text-dark text-center ">
-            Copyright &copy; Jose Dacosta
-            <a href="https://twitter.com/josedacosta339" class="fa fa-twitter"></a>
-            <a href="https://www.linkedin.com/in/jose-dacosta-95b537182/" class="fa fa-linkedin"></a>
-            <a href="https://github.com/Nekketsu-GIT" class="fa fa-github"></a>
-        </p>
+    <footer class="text-center">
+        <a href="#about">
+            <span class="fas fa-chevron-up"></span>
+        </a>
+        <h5>© Jose DACOSTA</h5>
         <div class="attribution" style="width: 100px; height: 100px;">
             <a href="https://buttercms.com">
                 <img src="{% static 'img/butter-y.png' %}" class="img-fluid rounded b-shadow-a" alt="">
             </a>
         </div>
     </footer>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!-- JavaScript Libraries -->
-<script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
-<script src="{% static 'lib/popper/popper.min.js' %}"></script>
-<script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'lib/easing/easing.min.js' %}"></script>
-<script src="{% static 'lib/counterup/jquery.waypoints.min.js' %}"></script>
-<script src="{% static 'lib/counterup/jquery.counterup.js' %}"></script>
-<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-<script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
-<script src="{% static 'lib/typed/typed.min.js' %}"></script>
 
-<!-- Template Main Javascript File -->
-<script src="{% static 'js/main.js' %}"></script>
+</div>
+
 </body>
+
+
 </html>
