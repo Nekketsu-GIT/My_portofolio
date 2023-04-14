@@ -1,0 +1,16 @@
+asgiref==3.2.7
+buttercms-python==1.2
+certifi==2020.4.5.1
+chardet==3.0.4
+dj-database-url==0.5.0
+Django==3.0.7
+django-crispy-forms==1.9.1
+idna==2.9
+psycopg2-binary==2.9.6
+pytz==2020.1
+requests==2.23.0
+sqlparse==0.3.1
+urllib3==1.25.9
+whitenoise==5.1.0
+pymysql==1.0.2
+pillow==8.4.0

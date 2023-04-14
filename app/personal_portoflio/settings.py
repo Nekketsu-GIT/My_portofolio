@@ -27,7 +27,7 @@ SECRET_KEY = '(=tyf@8sfown%@xjdq$ax^lk3f(k=1w-edn8t#v7-u!2ozpm94'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'personal_portoflio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_portofolio',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
+        'NAME': 'portofolio',
+        'USER': 'portofolio',
+        'PASSWORD': 'portofolio',
+        'HOST': 'db',  # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }

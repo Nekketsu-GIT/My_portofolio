@@ -1,0 +1,33 @@
+# two services mysql database and portofolio
+version: '3.7'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: portofolio
+      MYSQL_USER: portofolio
+      MYSQL_PASSWORD: portofolio
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  portofolio:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    command: sh -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver" 
+
+
+volumes:
+  db_data: {}
