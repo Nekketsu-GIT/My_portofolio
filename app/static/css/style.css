@@ -3,6 +3,10 @@
 body{
     font-family: 'Lato', sans-serif;
 }
+
+.container{
+    min-height: 100vh;
+}
 h1,h2,h3,h4,h5,h6{
     font-weight: bold;
 }
@@ -26,7 +30,7 @@ section .heading h2{
 .red-divider{
     width: 100px;
     height: 2px;
-    background: #d82c2e;
+    background: #312c2c;
     margin: 0 auto 20px;
 
 }
@@ -40,7 +44,7 @@ section .heading h2{
 
 /* MENU */
 .navbar {
-    background-color: #d82c2e;
+    background-color: #312c2c;
     font-size: 12px;
     border-bottom: 1px solid #fff;
     letter-spacing: 4px;
@@ -52,7 +56,7 @@ section .heading h2{
     text-align: center;
 }
 .nav-pills .nav-link.active,  .nav-pills .nav-link:hover{
-    color: #d82c2e !important;
+    color: #312c2c !important;
     background-color: #fff !important;
 }
 .navbar-toggler{
@@ -64,7 +68,7 @@ section .heading h2{
 /* ABOUT */
 #about{
     padding-top: 50px;
-    background: #d82c2e;
+    background: #312c2c;
 }
 
 .profile-picture{
@@ -93,7 +97,7 @@ section .heading h2{
 }
 .button1:hover{
     background: white;
-    color: #d82c2e;
+    color: #312c2c;
     text-decoration: none;
 }
 
@@ -104,7 +108,7 @@ section .heading h2{
 }
 
 #skills .heading h2 {
-    color: #d82c2e;
+    color: #312c2c;
 }
 #skills .progress{
     height: auto;
@@ -112,7 +116,7 @@ section .heading h2{
     background: #ddd;
 }
 #skills .progress-bar{
-    background: #d82c2e;
+    background: #312c2c;
 }
 #skills .progress h5{
     margin-top: 5px;
@@ -122,7 +126,7 @@ section .heading h2{
 
 /* EXPERIENCE */
 #experience{
-    background: #d82c2e;
+    background: #312c2c;
 }
 #experience .heading h2{
     color: #fff;
@@ -153,7 +157,7 @@ section .heading h2{
     display: table;
 }
 .timeline li .timeline-badge{
-    color: #d82c2e;
+    color: #312c2c;
     width: 50px;
     line-height: 50px;
     font-size: 20px;
@@ -210,7 +214,7 @@ section .heading h2{
     font-size: 20px;
 }
 .timeline-heading h4{
-     color: #d82c2e;
+     color: #312c2c;
 }
 
 
@@ -219,7 +223,7 @@ section .heading h2{
     background: #fff;
 }
 #project .heading h2{
-    color: #d82c2e;
+    color: #312c2c;
 }
 .project-block{
     width:90%;
@@ -241,7 +245,7 @@ section .heading h2{
     font-size: 35px;
 }
 .project-block h3{
-     color: #d82c2e;
+     color: #312c2c;
 }
 .project-block h4{
    margin-bottom: 20px;
@@ -256,7 +260,7 @@ section .heading h2{
 
 /* PORTFOLIO */
 #post{
-    background: #d82c2e;
+    background: #312c2c;
 }
 #post .heading h2{
     color: #fff;
@@ -281,11 +285,11 @@ section .heading h2{
     background: #fff;
 }
 #recommandations .heading h2{
-    color: #d82c2e;
+    color: #312c2c;
 }
 .fas.fa-chevron-left, .fas.fa-chevron-right{
     background-image: none;
-    color: #d82c2e;
+    color: #312c2c;
 }
 .carousel-indicators{
     bottom: 0px;
@@ -294,16 +298,16 @@ section .heading h2{
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    border: 1px solid #d82c2e;
+    border: 1px solid #312c2c;
 }
 .carousel-indicators li.active{
-    background-color: #d82c2e;
+    background-color: #312c2c;
 }
 #myCarousel .carousel-item{
     padding: 40px 30px;
 }
 #myCarousel .carousel-item h3{
-    color: #d82c2e;
+    color: #312c2c;
     font-style: italic;
 }
 
@@ -316,7 +320,7 @@ footer{
 footer .fas{
     font-size:  25px;
     margin: 20px;
-    color: #d82c2e;
+    color: #312c2c;
     height: 30px;
 }
 footer .fas:hover{
@@ -338,7 +342,7 @@ footer h5{
 {
     text-transform: uppercase;
     font-weight:bold;
-    color: #d82c2e;
+    color: #312c2c;
 }
 #contact-form
 {
@@ -363,39 +367,30 @@ footer h5{
 {
     font-style: italic;
     font-size: 18px;
-    color: #d82c2e;
+    color: #312c2c;
     height: 25px
 }
 
 .red{
-    color: #d82c2e;
+    color: #312c2c;
 }
 
-#contact .button1{
-    background: #d82c2e;
+
+
+.button1{
+    background: #312c2c;
+    border: 1px solid #161b3b;
 }
 
-#contact .button1:hover{
+.button1:hover{
     background: #fff;
-    color: #d82c2e;
+    color: #312c2c;
+
 }
 
-#post .button1{
-    background: #d82c2e;
-}
+.card-img-top{
 
-#post .button1:hover{
-    background: #fff;
-    color: #d82c2e;
-}
-
-#blog .button1{
-    background: #d82c2e;
-}
-
-#blog .button1:hover{
-    background: #fff;
-    color: #d82c2e;
+    height: 200px;
 }
 
 
